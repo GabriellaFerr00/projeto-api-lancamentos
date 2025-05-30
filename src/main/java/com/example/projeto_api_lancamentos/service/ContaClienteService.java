@@ -47,9 +47,10 @@ public class ContaClienteService {
             if (entrada.tipoTransacao().equals(TipoTransacaoType.CREDITO)) {
                 conta.transacaoDeposito(entrada.valorTransacao());
             } else if (entrada.tipoTransacao().equals(TipoTransacaoType.DEBITO)) {
-                conta.transacaoRetirada(entrada.valorTransacao());
-            } else {
-                throw new RegrasCasoDeUsoException(Messages.SALDO_INSUFICIENTE + conta.getSaldo());
+                Boolean ok = conta.transacaoRetirada(entrada.valorTransacao());
+                if (!ok) {
+                    throw new RegrasCasoDeUsoException(Messages.SALDO_INSUFICIENTE + conta.getSaldo());
+                }
             }
 
             LancamentoEntity lancamento = LancamentoEntity
@@ -70,7 +71,7 @@ public class ContaClienteService {
 
     }
 
-    private ContaClienteEntity getContaCliente(Long idConta) {
+    public ContaClienteEntity getContaCliente(Long idConta) {
         return repository.findById(idConta)
                 .orElseThrow(() -> new RegrasBuscaRepositoryException(Messages.CONTA_NAO_ENCONTRADA + idConta));
     }

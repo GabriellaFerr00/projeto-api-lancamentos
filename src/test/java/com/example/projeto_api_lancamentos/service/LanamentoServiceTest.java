@@ -5,6 +5,7 @@ import com.example.projeto_api_lancamentos.handler.exception.RegrasBuscaReposito
 import com.example.projeto_api_lancamentos.handler.exception.RegrasDadosDeEntradaException;
 import com.example.projeto_api_lancamentos.model.LancamentoEntity;
 import com.example.projeto_api_lancamentos.model.dto.LancamentoResponseDTO;
+import com.example.projeto_api_lancamentos.model.dto.TransacaoBaseDTO;
 import com.example.projeto_api_lancamentos.model.enums.TipoTransacaoType;
 import com.example.projeto_api_lancamentos.repository.LancamentoRepository;
 import com.example.projeto_api_lancamentos.stubs.StubLancamento;
