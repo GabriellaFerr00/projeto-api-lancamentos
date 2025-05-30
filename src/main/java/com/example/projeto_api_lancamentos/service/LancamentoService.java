@@ -33,7 +33,7 @@ public class LancamentoService {
                 .toList();
     }
 
-    private LancamentoResponseDTO converteEntidadeParaDTO(LancamentoEntity entidade) {
+    public LancamentoResponseDTO converteEntidadeParaDTO(LancamentoEntity entidade) {
         return new LancamentoResponseDTO(entidade.getTipoTransacaoType(), entidade.getValorTransacao(), entidade.getDataTransacao());
     }
 
