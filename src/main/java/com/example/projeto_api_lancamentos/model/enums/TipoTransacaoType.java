@@ -1,4 +1,4 @@
-package com.example.projeto_api_lancamentos.model.enuns;
+package com.example.projeto_api_lancamentos.model.enums;
 
 import lombok.Getter;
 
