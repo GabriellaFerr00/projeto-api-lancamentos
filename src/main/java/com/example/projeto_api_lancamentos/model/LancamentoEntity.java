@@ -1,6 +1,6 @@
 package com.example.projeto_api_lancamentos.model;
 
-import com.example.projeto_api_lancamentos.model.enuns.TipoTransacaoType;
+import com.example.projeto_api_lancamentos.model.enums.TipoTransacaoType;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
